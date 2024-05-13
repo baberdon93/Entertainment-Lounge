@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entertainment Lounge</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="nav__header">
+      <nav>
+        <figure>
+          <img
+            id="personal-logo"
+            src="assets/logo__gray.png"
+            alt=""
+          />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Home</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Book Online</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect link__hover-effect--black"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link-primary" onclick="toggleLogin()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect link__hover-effect--black"
+              ><i class="fas fa-user"></i>Login</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            >
+              <i class="fas fa-adjust"></i
+            ></a>
+          </li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list">
+                <a href="books.html" class="menu__link" onclick="closeMenu()" target="_blank">Book Online</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor"  onclick="toggleModal(), closeMenu()">Contact</a>
+              </li>
+              <li class="menu__list">
+                <a class="menu__link no-cursor"  onclick="toggleLogin(), closeMenu()" >Login</a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    <section id="our__services">
+        <div class="container">
+            <div class="row">
+                <h1 class="title">Our Services</h1>
+             <div class="display__flex--services">
+               
+                      <div class="project__wrapper">
+                        <img class="project__img" src="assets/racingsimulator.webp" alt="">
+                      <div class="project__wrapper--bg">
+                        <div class="project__description">
+                        <h3 class="project__description--title">
+                          Racing Simulator
+                        </h3>
+                        
+                        <p class="project__description--para">We provide a racing simulator on a Playstation 4  which accurately simulates auto racing with real world variables.</p>
+                      <div class="project__description--links">
+                        <a class="" href="#" target="_blank"><button class="project__description--link">
+                          Book Now
+                        </button>
+                        </a>
+                      </div>
+                      </div>
+                    </div>
+                      </div>
+                      <div class="project__wrapper">
+                        <img class="project__img" src="assets/consoles.webp" alt="">
+                      <div class="project__wrapper--bg">
+                        <div class="project__description">
+                        <h3 class="project__description--title">
+                          The Latest Gaming Consoles
+                        </h3>
+                        
+                        <p class="project__description--para">All latest gaming systems including 2 Playstation 5's, XBOX1,  XBOX1S,  XBOX SERIES S, Nintendo Switch, Wii with software from NES, Super Nintendo, GameCube, Wii U, Gameboy, Gameboy Color, and Gameboy Advance.</p>
+                      <div class="project__description--links">
+                        <a class="" href="#" target="_blank"><button class="project__description--link">
+                          Book Now
+                        </button>
+                        </a>
+                      </div>
+                      </div>
+                    </div>
+                      </div>
+                      <div class="project__wrapper">
+                        <img class="project__img" src="assets/vrheadset.webp" alt="">
+                      <div class="project__wrapper--bg">
+                        <div class="project__description">
+                        <h3 class="project__description--title">
+                          VR Headsets
+                        </h3>
+                        
+                        <p class="project__description--para">Virtual reality will take you on an adventure, they generate realistic sensations that simulate users physical presence in a computer generated environment. We offer the Oculus VR, and the Meta Quest systems.</p>
+                      <div class="project__description--links">
+                        <a class="" href="#" target="_blank"><button class="project__description--link">
+                          Book Now
+                        </button>
+                        </a>
+                      </div>
+                      </div>
+                    </div>
+                      </div>
+                  
+                  
+                    
+                </div>   
+              </div>
+          </div>
+        </div>
+
+        <a href="#">
+            <button class="mail__button click" onclick="toggleModal()">
+              <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+
+
+        <div class="modal">
+            <div class="modal__half modal__about">
+              <h3 class="modal__title modal__title--about">Put any information here</h3>
+              <h5 class="modal__sub-title modal__sub-title--about"></h5>
+              <p class="modal__about--para">
+              </p>
+              
+            </div>
+            <div class="modal__half modal__contact">
+              <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+              <h4 class="modal__title modal__title--contact">
+                Contact me!</h4>
+                <h4 class="modal__sub-title modal__sub-title__contact">
+                 I am open to new opportunities!
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                  <div class="form__item">
+                    <label class="form__item--label">Name</label>
+                    <input class="input" name="user_name" type="name" placeholder="First and Last" required></input>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__item--label">E-Mail</label>
+                    <input class="input" name="user_email" type="email" placeholder="Janedoe@email.com" required></input>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__item--label">Phone</label>
+                    <input class="input" name="user_phone" type="phone" placeholder="555-555-5555" required></input>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__item--label">Message</label>
+                    <textarea class="input" name="message" type="text" placeholder="Any questions, comments or concerns!" required></textarea>
+                  </div>
+                  <button id="contact__submit" class="form__submit">Send it my way!</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                  <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                  Thanks for the message! Looking forward to speaking to you soon!
+                </div>
+            </div>
+            
+          </div>
+        <div class="modal2">
+            <div class="modal__half2 modal__about2">
+              <h3 class="modal__title modal__title--about">Put any information here</h3>
+              <h5 class="modal__sub-title modal__sub-title--about"></h5>
+              <p class="modal__about--para">
+              </p>
+              
+            </div>
+            <div class="modal__half2 modal__contact2">
+              <i class="fas fa-times modal__exit2 click" onclick="toggleLogin()"></i>
+              <h4 class="modal__title2 modal__title--contact2">
+               </h4>
+                <h4 class="modal__sub-title2 modal__sub-title__contact2">
+                 
+                </h4>
+                <form id="log-in">
+                  <div class="form__item">
+                    <label class="form__item--label">Name</label>
+                    <input class="input" name="user_name" type="name" placeholder="Username" required></input>
+                  </div>
+                  <div class="form__item">
+                    <label class="form__item--label">E-Mail</label>
+                    <input class="input" name="user_email" type="password" placeholder="Password" required></input>
+                  </div>
+                 
+                  
+                  <button id="contact__submit" class="form__submit">Log-in</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                  <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                  Thanks for the message! Looking forward to speaking to you soon!
+                </div>
+            </div>
+            
+          </div>
+
+    </section>
+    <footer>
+        <div class="conatiner footer__container">
+          <div class="row footer__row">
+          <figure class="footer__logo--social">
+            <a href="#" class="footer__anchor">
+                <figure class="footer__logo">
+                  <img src="/assets/logo.svg" class="logo" alt="">
+                </figure>
+                <span class="footer__logo--popper">
+                 <i class="fas fa-arrow-up">Top</i>
+                </span>
+              </a>
+              <div class="footer__social--links">
+              <a href="#" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white"
+              ><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100091288119045&mibextid=LQQJ4d" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect
+              link__hover-effect--white"
+              ><i class="fab fa-facebook"></i></a>
+              <a href="#" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect
+              link__hover-effect--white"
+              ><i class="fab fa-tiktok"></i></a>
+              <a href="#" class= "
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white"
+              onclick="toggleModal()"
+              ><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer__copyright"><i class="fas fa-copyright">Copyright 2024<br>Entertainment Lounge LLC</i></div>
+          </figure>
+        </div>
+      </div>
+      </footer>
+  </body>
+</html>
+
+<!-- 270949 -->
