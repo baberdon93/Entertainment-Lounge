@@ -818,6 +818,32 @@ SMALL SCREEN MENU
     .footer__social--link {
         margin: 12px
     }
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+     }
+     .modal__half {
+        width: 100%;
+        
+     }
+    .modal2 {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+     }
+     .modal__half2 {
+        width: 100%;
+        
+     }
   }
     @media (max-width: 320px) {
         .project__description--para {
