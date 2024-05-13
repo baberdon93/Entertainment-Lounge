@@ -1,5 +1,5 @@
 let contrastToggle = false;
-let isModalOpen = false;
+let isModalOpen = false
 let isLoginOpen = false;
 
 function toggleContrast() {
@@ -12,14 +12,27 @@ function toggleContrast() {
     }
   }
 
+
+
 function toggleModal() {
+    var modal = document.querySelector(".modal");
+    var openEnvelopeIcon = document.querySelector(".fa-envelope-open");
+    var closedEnvelopeIcon = document.querySelector(".fa-envelope");
+
     if (isModalOpen) {
         isModalOpen = false;
-        return document.body.classList.remove("modal--open");
+        document.body.classList.remove("modal--open");
+        modal.style.visibility = "hidden"; 
+        openEnvelopeIcon.style.display = "none"; 
+        closedEnvelopeIcon.style.display = "inline-block"; 
+    } else {
+        isModalOpen = true;
+        document.body.classList += " modal--open";
+        modal.style.visibility = "visible"; 
+        openEnvelopeIcon.style.display = "inline-block"; 
+        closedEnvelopeIcon.style.display = "none"; 
     }
-    isModalOpen = true;
-    document.body.classList += " modal--open";
-  }
+}
 
 
 function toggleLogin() {

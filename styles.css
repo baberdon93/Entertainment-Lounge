@@ -379,6 +379,7 @@ MODAL
  .modal__about {
     background-color: lightgray;
     padding: 40px;
+    transform-origin: right center;
     transform: translateX(-110%);
    
  }
@@ -553,6 +554,21 @@ MODAL
     z-index: 100;
     position: fixed;
  }
+ /* .mail__button {
+    width: 70px;
+    height:  70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: #ffffff;
+    position: absolute;
+    bottom: 32px;
+    right: 50px;
+    box-shadow: 0 0 50px 0 #000000;
+    z-index: 100;
+    position: fixed;
+ } */
 
  input, textarea {
     width: 100%;

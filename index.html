@@ -152,55 +152,55 @@
         </div>
 
         <a href="#">
-            <button class="mail__button click" onclick="toggleModal()">
+          <button class="mail__button click" onclick="toggleModal()">
+              <!-- Icon for the closed envelope -->
               <i class="fas fa-envelope"></i>
-            </button>
-        </a>
-
-
-        <div class="modal">
-            <div class="modal__half modal__about">
+              <!-- Icon for the open envelope (initially hidden) -->
+              <i class="fas fa-envelope-open" style="display: none;"></i>
+          </button>
+      </a>
+      
+      <div id="modal" class="modal">
+          <div class="modal__half modal__about">
               <h3 class="modal__title modal__title--about">Put any information here</h3>
               <h5 class="modal__sub-title modal__sub-title--about"></h5>
               <p class="modal__about--para">
               </p>
-              
-            </div>
-            <div class="modal__half modal__contact">
+          </div>
+          <div class="modal__half modal__contact">
               <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
               <h4 class="modal__title modal__title--contact">
-                Contact us with any questions!</h4>
-                <h4 class="modal__sub-title modal__sub-title__contact">
-                 We hope to hear from you soon!
-                </h4>
-                <form id="contact__form" onsubmit="contact(event)">
+                  Contact us with any questions!</h4>
+              <h4 class="modal__sub-title modal__sub-title__contact">
+                  We hope to hear from you soon!
+              </h4>
+              <form id="contact__form" onsubmit="contact(event)">
                   <div class="form__item">
-                    <label class="form__item--label">Name</label>
-                    <input class="input" name="user_name" type="name" placeholder="First and Last" required></input>
+                      <label class="form__item--label">Name</label>
+                      <input class="input" name="user_name" type="name" placeholder="First and Last" required></input>
                   </div>
                   <div class="form__item">
-                    <label class="form__item--label">E-Mail</label>
-                    <input class="input" name="user_email" type="email" placeholder="Janedoe@email.com" required></input>
+                      <label class="form__item--label">E-Mail</label>
+                      <input class="input" name="user_email" type="email" placeholder="Janedoe@email.com" required></input>
                   </div>
                   <div class="form__item">
-                    <label class="form__item--label">Phone</label>
-                    <input class="input" name="user_phone" type="phone" placeholder="555-555-5555" required></input>
+                      <label class="form__item--label">Phone</label>
+                      <input class="input" name="user_phone" type="phone" placeholder="555-555-5555" required></input>
                   </div>
                   <div class="form__item">
-                    <label class="form__item--label">Message</label>
-                    <textarea class="input" name="message" type="text" placeholder="Any questions, comments or concerns!" required></textarea>
+                      <label class="form__item--label">Message</label>
+                      <textarea class="input" name="message" type="text" placeholder="Any questions, comments or concerns!" required></textarea>
                   </div>
                   <button id="contact__submit" class="form__submit">Send it my way!</button>
-                </form>
-                <div class="modal__overlay modal__overlay--loading">
+              </form>
+              <div class="modal__overlay modal__overlay--loading">
                   <i class="fas fa-spinner"></i>
-                </div>
-                <div class="modal__overlay modal__overlay--success">
+              </div>
+              <div class="modal__overlay modal__overlay--success">
                   Thanks for the message! Looking forward to speaking to you soon!
-                </div>
-            </div>
-            
+              </div>
           </div>
+      </div>
         <div class="modal2">
             <div class="modal__half2 modal__about2">
               <h3 class="modal__title modal__title--about">Put any information here</h3>
